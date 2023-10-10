@@ -1,7 +1,6 @@
 import machine
 import socket
 import network
-import uos
 import uhashlib
 import ubinascii
 
@@ -13,9 +12,8 @@ DEVICE_ID = "BE4ADCD4-E8FA-40B0-ACB5-2B2B25B5B9"
 ESSID = "ESP32-SmartLock-06"
 WIFI_PASS = "12345678"
 DEFAULT_TOKEN = "ACB5"
-# "ACB5-2B2B25B5B9"
 TOKEN_FILE = "token.txt"
-SECRET_KEY = "minhachave"
+SECRET_KEY = "senai"
 
 led = machine.Pin(LED_PIN, machine.Pin.OUT)
 
@@ -42,6 +40,27 @@ def init_wifi():
     ap.config(essid=ESSID, password=WIFI_PASS)
     print(f'Rede criada. Conecte-se a "{ESSID}" com a senha "{WIFI_PASS}".')
 
+def get_connected_devices():
+    ap = network.WLAN(network.AP_IF)
+    return ap.status('stations')
+
+def generate_connected_devices_page():
+    devices = get_connected_devices()
+    devices_list = "<br>".join([":".join(["{:02x}".format(b) for b in mac[0]]) for mac in devices])
+    
+    html = f"""
+    <html>
+    <head>
+        <title>Connected Devices</title>
+    </head>
+    <body>
+        <h1>Connected Devices</h1>
+        <p>{devices_list}</p>
+    </body>
+    </html>
+    """
+    return html
+
 def handle_request(request):
     stored_token = load_token()
 
@@ -64,6 +83,9 @@ def handle_request(request):
             return "redirect", "LED command processed!"
         else:
             return "redirect", "Unauthorized request!"
+
+    if "GET /connected_devices" in request:
+        return "content", generate_connected_devices_page()
 
     return "content", generate_html_page()
 
@@ -111,6 +133,7 @@ def generate_html_page():
             <input type="text" name="new_token" placeholder="New token" required><br><br>
             <button type="submit">Update Token</button>
         </form>
+        <a href="/connected_devices">View connected devices</a>
     </body>
     </html>
     """
@@ -136,7 +159,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
 
