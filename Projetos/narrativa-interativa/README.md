@@ -1,4 +1,4 @@
-# Leitor de História Interativo
+# Narrativa Interativa
 
 Este é um projeto de leitor de histórias interativas que utiliza uma estrutura de árvore binária para criar uma narrativa ramificada. Os usuários podem fazer escolhas ao longo da história, que determinam o caminho a seguir na narrativa.
 
