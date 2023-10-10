@@ -1,0 +1,162 @@
+<story title="Raízes da Terra: O Renascimento do Campo">
+    <introduction>
+        No interior do Maranhão, onde os campos verdejantes são palco de histórias de resistência e amor ao campo, vive a família de Mikael e Marilene. Embora a região em que vivem tenha um dos menores índices de desenvolvimento humano do Brasil, esse casal de agricultores tem mostrado que é possível trilhar um caminho de prosperidade e sustentabilidade. Tendo as raízes fincadas em uma tradição agrícola que remonta a gerações passadas, Mikael, Marilene e seus filhos, Bernardo e Pedro, enfrentam os desafios diários do campo com inovação e resiliência. Através de práticas agroecológicas, como o sistema agroflorestal e a horta integrada, eles não só produzem alimentos saudáveis para a sua comunidade, mas também se tornam um símbolo de esperança e inspiração para pequenos agricultores de todo o país. Em "Raízes da Terra: O Renascimento do Campo", embarque em uma jornada pela vida dessa família que, através do suor e da paixão pelo que fazem, provam que o coração do agronegócio brasileiro pulsa forte no pequeno agricultor.
+        Mikael e Marilene, com sua paixão pela terra e dedicação inabalável, são o coração pulsante do agronegócio no interior do Maranhão. Seus dois filhos, Bernardo e Pedro, são a esperança viva de que essa tradição continuará.
+    </introduction>
+    
+    <level1>
+        <choice id="A" description="Explorar a jornada de Mikael e Marilene na agricultura.">
+            <level2>
+                <choice id="A1" description="Entender o legado da família na agricultura.">
+                    <level3>
+                        <choice id="A1a" description="Descobrir as raízes da família no povoado dos Andradas.">
+                            <level4>
+                                <choice id="A1a1" description="Conhecer a história da Sociedade dos Trabalhadores e Trabalhadoras Rurais de São Sebastião.">
+                                    <level5>
+                                        <choice id="A1a1a" description="Aprofundar-se na compra coletiva da terra em 1988."/>
+                                        <choice id="A1a1b" description="Explorar a relação da família com a Igreja e os recursos para a compra."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A1a2" description="Aprender sobre as terras e estabelecimentos da família.">
+                                    <level5>
+                                        <choice id="A1a2a" description="Visitar a pastagem formada e entender sua relação com a palmeira babaçu."/>
+                                        <choice id="A1a2b" description="Desvendar os segredos da agricultura familiar sem uso de fogo ou agroquímicos."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="A1b" description="Delinear o impacto da formação e educação dos filhos na agricultura familiar.">
+                            <level4>
+                                <choice id="A1b1" description="Seguir a trajetória de Bernardo na Zootecnia.">
+                                    <level5>
+                                        <choice id="A1b1a" description="Entender como a formação de Bernardo pode impactar a fazenda da família no futuro."/>
+                                        <choice id="A1b1b" description="Descobrir as aspirações de Bernardo para o futuro da agricultura local."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A1b2" description="Explorar a influência do técnico em Agropecuária, Pedro, no estabelecimento.">
+                                    <level5>
+                                        <choice id="A1b2a" description="Compreender as técnicas modernas que Pedro pode ter introduzido."/>
+                                        <choice id="A1b2b" description="Apreciar a fusão da tradição com inovação no campo."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+                <choice id="A2" description="Descobrir as inovações e práticas sustentáveis adotadas pelo casal.">
+                    <level3>
+                        <choice id="A2a" description="Examinar o projeto Babaçu Livre e sua influência na produção local.">
+                            <level4>
+                                <choice id="A2a1" description="Entender a relação da família com a Coppalj e a L’Oréal.">
+                                    <level5>
+                                        <choice id="A2a1a" description="Desvendar como o financiamento impactou a biodiversidade local."/>
+                                        <choice id="A2a1b" description="Aprender sobre os benefícios econômicos e ambientais do projeto para a comunidade."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A2a2" description="Mergulhar na formação do pomar agroflorestal.">
+                                    <level5>
+                                        <choice id="A2a2a" description="Explorar as técnicas de consórcio de culturas no pomar."/>
+                                        <choice id="A2a2b" description="Apreciar a biodiversidade e os frutos do trabalho duro no pomar."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="A2b" description="Conhecer a produção intensiva de hortaliças e sua importância econômica para a família.">
+                            <level4>
+                                <choice id="A2b1" description="Desvendar o sistema PAIS e a integração da produção animal e vegetal.">
+                                    <level5>
+                                        <choice id="A2b1a" description="Entender como a Assema e a Fundação Banco do Brasil ajudaram na replicação desta tecnologia."/>
+                                        <choice id="A2b1b" description="Apreciar a autossuficiência e circularidade do sistema."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A2b2" description="Explorar as técnicas e práticas utilizadas nos canteiros de hortaliças.">
+                                    <level5>
+                                        <choice id="A2b2a" description="Aprender sobre rotação de culturas e cobertura morta."/>
+                                        <choice id="A2b2b" description="Entender a importância da diversidade de plantas e a prevenção de doenças."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+            </level2>
+        </choice>
+        
+        <choice id="B" description="Aprofundar-se na cultura e na vida cotidiana da família e da comunidade.">
+            <level2>
+                <choice id="B1" description="Desvendar as tradições e celebrações da comunidade dos Andradas.">
+                    <level3>
+                        <choice id="B1a" description="Entender a celebração do Dia do Agricultor na comunidade.">
+                            <level4>
+                                <choice id="B1a1" description="Participar das festividades e rituais do dia.">
+                                    <level5>
+                                        <choice id="B1a1a" description="Conhecer as canções, danças e pratos tradicionais celebrados."/>
+                                        <choice id="B1a1b" description="Ouvir histórias e lendas passadas de geração em geração."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B1a2" description="Descobrir a importância deste dia para Mikael, Marilene e seus filhos.">
+                                    <level5>
+                                        <choice id="B1a2a" description="Compartilhar as memórias e tradições familiares deste dia especial."/>
+                                        <choice id="B1a2b" description="Entender como a celebração molda e reforça a identidade da família."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="B1b" description="Mergulhar nas tradições culturais e espirituais da comunidade.">
+                            <level4>
+                                <choice id="B1b1" description="Participar de cerimônias e rituais espirituais.">
+                                    <level5>
+                                        <choice id="B1b1a" description="Aprender sobre a influência da Igreja e outras crenças locais."/>
+                                        <choice id="B1b1b" description="Entender como a espiritualidade influencia a vida cotidiana e a agricultura."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B1b2" description="Descobrir as artes e expressões culturais da comunidade.">
+                                    <level5>
+                                        <choice id="B1b2a" description="Assistir a apresentações de dança, música e teatro locais."/>
+                                        <choice id="B1b2b" description="Aprender sobre a história e significado por trás dessas expressões culturais."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+                <choice id="B2" description="Compartilhar a vida cotidiana da família de Mikael e Marilene.">
+                    <level3>
+                        <choice id="B2a" description="Acompanhar o dia a dia de trabalho na fazenda.">
+                            <level4>
+                                <choice id="B2a1" description="Assistir aos rituais diários de cuidado com a terra e os animais.">
+                                    <level5>
+                                        <choice id="B2a1a" description="Participar da colheita e conhecer as técnicas utilizadas pela família."/>
+                                        <choice id="B2a1b" description="Entender a relação harmoniosa entre o homem e a natureza."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B2a2" description="Desvendar os desafios e recompensas da vida no campo.">
+                                    <level5>
+                                        <choice id="B2a2a" description="Compartilhar os momentos de alegria e celebração após uma boa colheita."/>
+                                        <choice id="B2a2b" description="Entender os desafios enfrentados durante as épocas de seca ou de pragas."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="B2b" description="Partilhar momentos de lazer e união da família.">
+                            <level4>
+                                <choice id="B2b1" description="Desfrutar das refeições preparadas com produtos frescos da fazenda.">
+                                    <level5>
+                                        <choice id="B2b1a" description="Aprender receitas tradicionais passadas de geração em geração."/>
+                                        <choice id="B2b1b" description="Entender a importância da alimentação na cultura e tradição familiar."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B2b2" description="Participar de momentos de descontração e celebração com a família.">
+                                    <level5>
+                                        <choice id="B2b2a" description="Jogar jogos tradicionais e compartilhar histórias ao redor da fogueira."/>
+                                        <choice id="B2b2b" description="Desfrutar da música e dança, celebrando a vida e a terra."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+            </level2>
+        </choice>
+    </level1>
+</story>

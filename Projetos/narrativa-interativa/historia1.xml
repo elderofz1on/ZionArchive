@@ -1,0 +1,162 @@
+<story title="A Confluência dos Destinos: A Teia da Terra">
+    <introduction>
+        João e Clara, ambos herdeiros de terras vastas e cheias de histórias, cruzam caminhos em uma conferência de agricultura sustentável...
+    </introduction>
+    
+    <level1>
+        <choice id="A" description="Focar na educação e sensibilização da comunidade local.">
+            <level2>
+                <choice id="A1" description="Organizar oficinas mensais sobre práticas agrícolas sustentáveis.">
+                    <level3>
+                        <choice id="A1a" description="Focar em ensinar sobre plantações agroflorestais.">
+                            <level4>
+                                <choice id="A1a1" description="Incentivar os agricultores a formar cooperativas.">
+                                    <level5>
+                                        <choice id="A1a1a" description="Oferecer incentivos fiscais para cooperativas."/>
+                                        <choice id="A1a1b" description="Organizar feiras mensais para produtos das cooperativas."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A1a2" description="Criar mercados locais para produtos agroflorestais.">
+                                    <level5>
+                                        <choice id="A1a2a" description="Oferecer treinamento sobre práticas de mercado e vendas."/>
+                                        <choice id="A1a2b" description="Promover campanhas publicitárias para produtos agroflorestais."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="A1b" description="Priorizar o ensino de técnicas de permacultura.">
+                            <level4>
+                                <choice id="A1b1" description="Estabelecer parcerias com fazendas orgânicas para treinamento.">
+                                    <level5>
+                                        <choice id="A1b1a" description="Iniciar programas de estágio para estudantes."/>
+                                        <choice id="A1b1b" description="Organizar visitas frequentes às fazendas parceiras."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A1b2" description="Iniciar um fundo comunitário para projetos de permacultura.">
+                                    <level5>
+                                        <choice id="A1b2a" description="Promover eventos de arrecadação para o fundo."/>
+                                        <choice id="A1b2b" description="Incentivar contribuições regulares da comunidade."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+                <choice id="A2" description="Criar uma escola dedicada à agroecologia.">
+                    <level3>
+                        <choice id="A2a" description="Iniciar a escola com um currículo local.">
+                            <level4>
+                                <choice id="A2a1" description="A escola se torna um centro de pesquisa.">
+                                    <level5>
+                                        <choice id="A2a1a" description="Promover intercâmbio de estudantes para pesquisa internacional."/>
+                                        <choice id="A2a1b" description="Estabelecer parcerias com universidades renomadas."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A2a2" description="Estabelecer um programa de intercâmbio com outras escolas agrícolas.">
+                                    <level5>
+                                        <choice id="A2a2a" description="Promover eventos conjuntos com escolas parceiras."/>
+                                        <choice id="A2a2b" description="Estabelecer programas de tutoria entre escolas."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="A2b" description="Trazer especialistas internacionais para lecionar.">
+                            <level4>
+                                <choice id="A2b1" description="Oferecer bolsas de estudo para estudantes locais.">
+                                    <level5>
+                                        <choice id="A2b1a" description="Estabelecer critérios rigorosos de seleção para bolsas."/>
+                                        <choice id="A2b1b" description="Promover competições acadêmicas para atribuição de bolsas."/>
+                                    </level5>
+                                </choice>
+                                <choice id="A2b2" description="Criar um evento anual para compartilhar descobertas e inovações.">
+                                    <level5>
+                                        <choice id="A2b2a" description="Convidar personalidades influentes no campo da agroecologia."/>
+                                        <choice id="A2b2b" description="Promover workshops práticos durante o evento."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+            </level2>
+        </choice>
+        
+        <choice id="B" description="Concentrar-se primeiro na transformação direta da terra.">
+            <level2>
+                <choice id="B1" description="Implementar práticas agrícolas modernas e sustentáveis imediatamente.">
+                    <level3>
+                        <choice id="B1a" description="Adotar tecnologias de irrigação avançada.">
+                            <level4>
+                                <choice id="B1a1" description="Introduzir sensores inteligentes para otimização da água.">
+                                    <level5>
+                                        <choice id="B1a1a" description="Oferecer treinamento para a manutenção dos sensores."/>
+                                        <choice id="B1a1b" description="Promover workshops para a comunidade sobre economia de água."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B1a2" description="Utilizar fontes renováveis para alimentar os sistemas.">
+                                    <level5>
+                                        <choice id="B1a2a" description="Promover a instalação de painéis solares nas propriedades."/>
+                                        <choice id="B1a2b" description="Oferecer incentivos para a conversão para energias renováveis."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="B1b" description="Experimentar cultivos em socalcos (terraços) nas encostas.">
+                            <level4>
+                                <choice id="B1b1" description="Criar um sistema de coleta de água da chuva.">
+                                    <level5>
+                                        <choice id="B1b1a" description="Organizar campanhas de conscientização sobre a importância da coleta de água da chuva."/>
+                                        <choice id="B1b1b" description="Oferecer kits de coleta para as famílias locais."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B1b2" description="Incorporar a arte local nas estruturas dos terraços.">
+                                    <level5>
+                                        <choice id="B1b2a" description="Contratar artistas locais para murais educativos sobre agricultura."/>
+                                        <choice id="B1b2b" description="Criar um festival anual de arte e agricultura para promover a cultura local."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+                
+                <choice id="B2" description="Começar com um grande projeto de conservação da biodiversidade.">
+                    <level3>
+                        <choice id="B2a" description="Estabelecer um santuário para espécies ameaçadas.">
+                            <level4>
+                                <choice id="B2a1" description="Iniciar programas de reprodução em cativeiro.">
+                                    <level5>
+                                        <choice id="B2a1a" description="Promover campanhas de adoção para financiar o programa."/>
+                                        <choice id="B2a1b" description="Estabelecer parcerias com zoológicos internacionais para troca de espécies."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B2a2" description="Criar trilhas educacionais pelo santuário.">
+                                    <level5>
+                                        <choice id="B2a2a" description="Estabelecer estações de aprendizado interativas ao longo das trilhas."/>
+                                        <choice id="B2a2b" description="Promover tours noturnos para observação de animais noturnos."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                        <choice id="B2b" description="Desenvolver um jardim botânico de plantas medicinais.">
+                            <level4>
+                                <choice id="B2b1" description="Organizar workshops sobre medicina tradicional.">
+                                    <level5>
+                                        <choice id="B2b1a" description="Introduzir cursos online para alcançar um público mais amplo."/>
+                                        <choice id="B2b1b" description="Criar uma certificação em medicina herbária."/>
+                                    </level5>
+                                </choice>
+                                <choice id="B2b2" description="Fazer parcerias com farmacêuticos para pesquisa.">
+                                    <level5>
+                                        <choice id="B2b2a" description="Estabelecer um laboratório de pesquisa no jardim botânico."/>
+                                        <choice id="B2b2b" description="Oferecer tours educativos para estudantes de medicina sobre plantas medicinais."/>
+                                    </level5>
+                                </choice>
+                            </level4>
+                        </choice>
+                    </level3>
+                </choice>
+            </level2>
+        </choice>
+    </level1>
+</story>
