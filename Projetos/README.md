@@ -10,3 +10,6 @@ SensorSimulator é um script em Python projetado para simular a geração de dad
 
 Este é um projeto de leitor de histórias interativas que utiliza uma estrutura de árvore binária para criar uma narrativa ramificada. Permite que os usuários explorem uma história interativa dividida em diferentes níveis, onde cada nível corresponde a uma parte da narrativa. Cada nível contém escolhas que os usuários podem fazer, e essas escolhas os direcionam para diferentes partes da história. O projeto mantém um histórico de escolhas, permitindo que os usuários voltem atrás e experimentem diferentes caminhos na história.
 
+⚡ESP32-SmartLock
+
+O projeto ESP32-SmartLock é um sistema de controle de fechadura inteligente desenvolvido para o microcontrolador ESP32. Utiliza tanto a tecnologia Wi-Fi quanto Bluetooth Low Energy (BLE) para interagir com o usuário, permitindo o controle de um LED (simulando uma fechadura) e a atualização de um token de segurança.
