@@ -1,4 +1,4 @@
-**Bases de Conhecimento**
+ [**Bases de Conhecimento**]
 
 (Art 01.. 02.. 05.. 06) Fundamentos. Definições e Princípios
 26/06/2023 ANPD lança Guia Orientativo sobre Tratamento de Dados Pessoais para Fins Acadêmicos
