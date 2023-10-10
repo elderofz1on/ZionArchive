@@ -1,5 +1,3 @@
-# README.md
-
 ## ESP32-SmartLock
 
 ### Descrição do Projeto
