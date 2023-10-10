@@ -13,7 +13,7 @@ ESSID = "ESP32-SmartLock-06"
 WIFI_PASS = "12345678"
 DEFAULT_TOKEN = "ACB5"
 TOKEN_FILE = "token.txt"
-SECRET_KEY = "senai"
+SECRET_KEY = "minhachave"
 
 led = machine.Pin(LED_PIN, machine.Pin.OUT)
 
