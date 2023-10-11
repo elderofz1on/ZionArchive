@@ -3,10 +3,10 @@ import socket
 import network
 import uhashlib
 import ubinascii
-import bluetooth
+import ubluetooth
 
 # Configurações do dispositivo
-LED_PIN = 2
+LED_PIN = 12
 MANUFACTURER = "ESP32-SmartLock"
 MODEL = "SSL01"
 DEVICE_ID = "BE4ADCD4-E8FA-40B0-ACB5-2B2B25B5B9"
@@ -17,6 +17,46 @@ TOKEN_FILE = "token.txt"
 SECRET_KEY = "minhachave"
 
 led = machine.Pin(LED_PIN, machine.Pin.OUT)
+
+class BLEHandler():
+    def __init__(self, name):
+        self.name = name
+        self.ble = ubluetooth.BLE()
+        self.ble.active(True)
+        self.ble.irq(self.ble_irq)
+        self.register()
+        self.advertiser()
+
+    def ble_irq(self, event, data):
+        if event == 3:  # An event indicating a BLE message received
+            buffer = self.ble.gatts_read(self.rx)
+            message = buffer.decode('UTF-8').strip()
+            print("Received message:", message)
+            self.handle_message(message)
+
+    def register(self):
+        # Nordic UART Service (NUS)
+        NUS_UUID = '6E400001-B5A3-F393-E0A9-E50E24DCCA9E'
+        RX_UUID = '6E400002-B5A3-F393-E0A9-E50E24DCCA9E'
+        TX_UUID = '6E400003-B5A3-F393-E0A9-E50E24DCCA9E'
+        
+        BLE_NUS = ubluetooth.UUID(NUS_UUID)
+        BLE_RX = (ubluetooth.UUID(RX_UUID), ubluetooth.FLAG_WRITE)
+        BLE_TX = (ubluetooth.UUID(TX_UUID), ubluetooth.FLAG_NOTIFY)
+        
+        BLE_UART = (BLE_NUS, (BLE_TX, BLE_RX,))
+        SERVICES = (BLE_UART, )
+        ((self.tx, self.rx,), ) = self.ble.gatts_register_services(SERVICES)
+
+    def advertiser(self):
+        name = bytes(self.name, 'UTF-8')
+        self.ble.gap_advertise(100, bytearray(b'\x02\x01\x02') + bytearray((len(name) + 1, 0x09)) + name)
+
+    def handle_message(self, message):
+        if message == "on":
+            led.value(0)
+        elif message == "off":
+            led.value(1)
 
 def hash_token(token):
     h = uhashlib.sha256()
@@ -115,39 +155,16 @@ def generate_html_page():
     """
     return html
 
-def init_ble():
-    ble = bluetooth.BLE()
-    ble.active(True)
-
-    SERVICE_UUID = bluetooth.UUID('E625601E-9E55-4597-A598-76018A0D293D')
-    CHAR_UUID = bluetooth.UUID('ADAFD546-3D1D-4F1F-9CBE-BE291F351A1B')
-
-    srv = ble.service(uuid=SERVICE_UUID, isprimary=True)
-    char = srv.characteristic(uuid=CHAR_UUID, value=5)
-    char_desc = char.descriptor(uuid=bluetooth.UUID('2901'), value='LED control')
-
-    def ble_irq(event, data):
-        if event == 1:  # Conexão BLE estabelecida
-            print("Device connected")
-        elif event == 2:  # Conexão BLE desconectada
-            print("Device disconnected")
-        elif event == 3:  # Solicitação de escrita BLE
-            print("Data received:", data)
-            # Aqui você pode adicionar código para lidar com os dados recebidos
-            # Por exemplo, ligar/desligar o LED com base nos dados recebidos
-
-    ble.irq(ble_irq)
-    ble.advertise(name='ESP32-SmartLock', services=[srv])
-
 def main():
     init_wifi()
-    init_ble()  # Inicializa o BLE
+    ble_handler = BLEHandler("ESP32-SmartLock-BLE")
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind(('', 80))
     s.listen(5)
 
     while True:
+        # Lida com solicitações WiFi
         conn, addr = s.accept()
         request = conn.recv(1024).decode("utf-8")
         action, response = handle_request(request)
@@ -157,6 +174,12 @@ def main():
             conn.send('HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n')
             conn.send(response)
         conn.close()
+
+        # Lida com solicitações BLE
+        # Nota: A implementação exata dependerá da sua lógica de negócios e da biblioteca BLE.
+        # Você pode precisar ajustar o código para se adequar às suas necessidades específicas.
+        # Aqui, estamos assumindo que você implementará a lógica necessária para obter dados do BLE
+        # na função ble_irq da classe BLEHandler.
 
 if __name__ == "__main__":
     main()
