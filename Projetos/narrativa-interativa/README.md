@@ -1,6 +1,6 @@
 # Narrativa Interativa
 
-Este é um projeto de leitor de histórias interativas que utiliza uma estrutura de árvore binária para criar uma narrativa ramificada. Os usuários podem fazer escolhas ao longo da história, que determinam o caminho a seguir na narrativa.
+Este é um projeto de leitor de histórias interativas que utiliza uma estrutura para criar uma narrativa ramificada. Os usuários podem fazer escolhas ao longo da história, que determinam o caminho a seguir na narrativa.
 
 ## Visão Geral
 
@@ -8,7 +8,7 @@ Este projeto permite que os usuários explorem uma história interativa dividida
 
 ## Estrutura da História
 
-A história é estruturada como uma árvore binária, onde cada nó representa um ponto de escolha na narrativa. Cada nó pode ter no máximo duas opções de escolha, que levam a diferentes ramos da história. Isso cria uma narrativa ramificada, onde as escolhas dos usuários influenciam o desenvolvimento da história.
+A história possui uma estrutura, onde cada nó representa um ponto de escolha na narrativa. Cada nó pode ter no máximo duas opções de escolha, que levam a diferentes ramos da história. Isso cria uma narrativa ramificada, onde as escolhas dos usuários influenciam o desenvolvimento da história.
 
 ## Tecnologias Utilizadas
 
